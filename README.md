@@ -3,7 +3,7 @@ This will be your portfolio repository. Use this as a [template repository](http
 
 # About Me
 *My name is Amber Horvath, I'm a postdoctoral associate researching code comprehension interventions, it's nice to meet you! [Here is a link to my real website.](https://amberhorvath.com)
-Now you should write something about yourself here!*
+*My name is Kelly Kim. I'm a senior at MIT studying computer science.
 
 Some fun facts about me:
 1. I love hockey.
