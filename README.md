@@ -17,4 +17,5 @@ Some fun facts about me:
 
 # Table of Contents
 [Link to Recitation 1](assignments/rec1.md)
+
 [Link to Assignment 1](assignments/assignment1.md)
