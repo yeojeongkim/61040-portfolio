@@ -62,6 +62,7 @@ How long the current restaurant/cafe lines are without having to be there.
 8. [Basic Foods Checklist: How to Stock Your Kitchen for Simple Meals](https://food.unl.edu/article/basic-foods-checklist-how-stock-your-kitchen-simple-meals/): An article on what food ingredients to keep in the house to make meal planning easier. They separate ingredients out by pantry, fridge, and freezer for organization.
 9. [14 Best Foods to Keep in Your Fridge](https://www.webmd.com/food-recipes/ss/slideshow-best-fridge-foods): An article on what the best foods are to keep in the fridge. They take into account convenience, versatility, and health benefits.
 10. [How Long Do Meals Last: A Quick Cheat Sheet](https://workweeklunch.com/how-long-meals-last/): An article that compiles how long common meals last in the fridge. This can give new ideas to what meals to prepare for the week and plan out when to eat such meals.
+
 ### News Filter
 1. [Media overload is hurting our mental health.](https://www.apa.org/monitor/2022/11/strain-media-overload): An article that highlights the cons of how much media there is to consume nowadays. They highlight that 73% of Americans in March of 2022 felt overwhelmed and stressed by the media exposure.
 2. [Why more and more people are tuning the news out: ‘Now I don’t have that anxiety’](https://www.theguardian.com/society/ng-interactive/2025/sep/01/news-avoidance-high-anxiety): An article that highlights various reasons as to why people avoid the news more, one of which being that it is due to "the sheer volume of news".
@@ -72,6 +73,7 @@ How long the current restaurant/cafe lines are without having to be there.
 7. [Substack](https://substack.com/about): Substack is an application to make consuming media and news easier for the viewer. It has a combination of typical news source content and social media content. It also has aspects of a social media where group chats can be made. However, users must download an application, and the content may not appeal to older generations.
 8. [British Broadcasting Corporation](https://www.bbc.com/news): BBC is a British news source that provides an international perspective on various current events. It also has its own biases and contain only one article per event.
 9. [What should a person read to stay truly informed with current events?](https://www.quora.com/What-should-a-person-read-to-stay-truly-informed-with-current-events): A Quora post discussing how to remain informed on current events. Many responses suggest websites like Substack, the Wall Street, etc. The responses also mention to read from a variety of sources to reduce bias.
+
 ### Wait Times
 1. [Yelp](https://blog.yelp.com/): Yelp is a webservice that helps people find reservations, relevant information, and reviewsa about restaurants. They also have a feature to remotely add yourself on a waitlist, but many restaurants do not offer this feature in Yelp. It only addresses the issue of getting onto a waitlist, rather than gauging how long the wait will be.
 2. [Waitlist Me](https://www.waitlist.me/join-waitlist-google/): Waitlist Me is a webservice available by Google in US and Canada. It allows customers to add themselves to a waitlist without having to be present. However, this does not resolve the issue of customers simply wanting to know how long the wait will be to determine where to eat at next.
@@ -83,4 +85,28 @@ How long the current restaurant/cafe lines are without having to be there.
 8. [Restaurant Reservation Culture Is Out of Control](https://www.bonappetit.com/story/restaurant-reservation-culture-explained?srsltid=AfmBOooSoIniMB2714uLYCFSm3GxOLX91sCpXmE8G0VKrnPWt7FA1HyX): An article that describes how the reservation culture has gotten out of hand, as it is getting harder and harder to get a reservation, but even harder to get seated without one. The article states that "reservation searches are up 107% around the country".
 
 ## Features:
+### Meal Prep Helper
+1. Ingredient Scanner
+   - Users scan the grocery receipts to automatically log what ingredients they bought. This makes the process of tracking the food in the fridge easier for home cooks, and there will be less forgotten or mismatched ingredients.
+2. Recipe Generator by Ingredients
+   - Based on the logged ingredients, the app suggests recipes that use what’s already at home. It reduces the need for extra grocery runs and minimizes waste. This directly benefits home cooks by making meal choices easier, while their roommates or family get more variety at the dinner table.
+3. Weekly Meal Plan Builder
+   - Instead of suggesting single meals, the app creates a week’s worth of meals using the same base ingredients in different ways. This ensures balanced variety and prevents odd leftovers. It helps home cooks plan ahead and could encourage grocery stores to integrate with the app, to gain loyalty with customers if paired with store inventory.
 
+### News Filter
+1. Interest/Time Based Field
+   - Articles are filtered not only by topic but also by estimated reading time (e.g., “5-min read before work”). This gives news readers an efficient way to keep up without feeling overwhelmed.
+2. Multi-Source Consolidation
+   - For a given news event, the app pulls articles from multiple outlets, then suggests the most relevant one to read. This helps news readers get the key perspective while also giving journalists and publishers fairer representation in visibility.
+3. Bias/Perspective Indicator
+   - Each article has a quick tag showing general bias (political, economic, etc.) or unique perspective. This lets news readers make more informed choices and allows advertisers to better align campaigns with readers’ interests and values.
+
+### Wait Times
+1. Live Crowd-Sourced Wait Estimates
+   - Customers at restaurants can quickly log current wait times into the app, similar to how Waze crowdsources traffic. This reduces uncertainty for restaurant customers and saves restaurant staff from constant phone calls.
+
+2. Live Restaurant-Provided Wait Estimates
+   - Partner with restaurants to access their seating and queue data. The app shows how many tables are open, how many parties are ahead, and the estimated wait. This reduces uncertainty for restaurant customers and saves restaurant staff from answering repeated calls about availability.
+
+3. Nearby Alternatives Suggestion
+   - If the wait is long, the app suggests similar nearby restaurants or bars/shops to kill time. This helps businesses nearby benefit from extra foot traffic and gives restaurant customers a smoother overall experience.
