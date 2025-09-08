@@ -16,23 +16,23 @@ How long the current restaurant/cafe lines are without having to be there.
 ## Problems:
 ### Domain 1
 1. *(UNSELECTED)* Finding new recipes with accessible ingredients.
-    - There are already many other ways to find new recipes. 
+    - There are already many other ways to find new recipes, so this can be unnecessary for man people. 
 2. *(UNSELECTED)* Using ingredients that are about to expire.
     - I personally have not had a problem failing to use them, but more of a failure in knowing they are about to expire.
 3. *(SELECTED)* **Meal Prep Helper** - Prepping meals with ingredients someone already has.
     - I go grocery shopping and buy various ingredients that I like. Eventually, the combination of the ingredients that are left over are unusable together for a meal or require extra ingredients that I do not have. It would be nice to have a list of meals I could prep for the week with the groceries I have at home.
 ### Domain 3
 1. *(UNSELECTED)* Lack of time to read all articles.
-    - This is too general of a problem, so a more specific issue would be easier/more interesting to solve.
+    - This is too general of a problem, so a more specific issue would be easier/more interesting to solve. Also, if this were the main issue to solve, the targeted audience may not be interested in reading articles at all.
 2. *(SELECTED)* **News Filter** - Difficult to find articles of interest.
     - There are news sources that suggest articles for you to read, but I want something to consolidate various news sources. Article can be categorized for each person based on interest, bias, length, etc. This can not only save people's time but also recommend articles they may have otherwise missed.
 3. *(UNSELECTED)* Identifying bias in news sources.
-    - A lot of people tend to not care as much about biases.
+    - A lot of people tend to not care as much about biases and want to read whatever news source that tells them what they want to hear. It needs to be a broader problem.
 ### Domain 8
 1. *(UNSELECTED)* Deciding on a restaurant to eat at.
-    - Many applications already help with this.
+    - Many applications already help with this, so it would not be innovative enough unless there was a specific problem to tackle.
 2. *(UNSELECTED)* Finding a restaurant reservation.
-    - Many applications already help with this.
+    - Many applications already help with this in a variety of ways, like recommendations from friends, general public ratings, etc.
 3. *(SELECTED)* **Wait Times** - Finding out wait times for restaurants.
     - Most restaurants won't give you a wait time online, but they also often are too busy to pick up phone calls. If there was a way to find out how long the wait would be before getting to the restaurant, it would help groups decide on their plan for the night. This can include how long they are willing to wait for a restaurant and whether there are other things to do in the area while waiting.
 
