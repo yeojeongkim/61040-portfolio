@@ -105,9 +105,7 @@ How long the current restaurant/cafe lines are without having to be there.
 ### Wait Times
 1. Live Crowd-Sourced Wait Estimates
    - Customers at restaurants can quickly log current wait times into the app, similar to how Waze crowdsources traffic. This reduces uncertainty for restaurant customers and saves restaurant staff from constant phone calls.
-
 2. Live Restaurant-Provided Wait Estimates
    - Partner with restaurants to access their seating and queue data. The app shows how many tables are open, how many parties are ahead, and the estimated wait. This reduces uncertainty for restaurant customers and saves restaurant staff from answering repeated calls about availability.
-
 3. Nearby Alternatives Suggestion
    - If the wait is long, the app suggests similar nearby restaurants or bars/shops to kill time. This helps businesses nearby benefit from extra foot traffic and gives restaurant customers a smoother overall experience.
