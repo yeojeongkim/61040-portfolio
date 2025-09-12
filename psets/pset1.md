@@ -34,7 +34,8 @@
 
 ## Exercise 2: Extending a familiar concept
 
-1. & 2. Complete given concept
+1. Complete the definition of the concept state.
+2. Write a requires/effects specification for each of the two actions.
    - **concept** PasswordAuthentication
    - **purpose** limit access to known users
    - **principle** after a user registers with a username and a password, they can authenticate with that same username and password and be treated each time as the same user
@@ -53,7 +54,7 @@
 3. What essential invariant must hold on the state? How is it preserved?
    - The essential invariant is that usernames are unique. This is preserved with the action *register*, as it requires that to register a new user, the given username must not already exist.
 
-4. Extend concept with email
+4. Extend concept to include confirmation with email.
    - **concept** PasswordAuthentication
    - **purpose** limit access to known users
    - **principle** after a user registers with a username and a password, they can authenticate with that same username and password and be treated each time as the same user
