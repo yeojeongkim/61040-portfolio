@@ -33,17 +33,50 @@
 
 
 ## Exercise 2: Extending a familiar concept
-1. Complete the definition of the concept state.
-   - ans
 
-2. Write a requires/effects specification for each of the two actions. (Hints: The register action creates and returns a new user. The authenticate action is primarily a guard, and doesn’t mutate the state.)
-   - ans
+1. & 2. Complete given concept
+   - **concept** PasswordAuthentication
+   - **purpose** limit access to known users
+   - **principle** after a user registers with a username and a password, they can authenticate with that same username and password and be treated each time as the same user
+   - **state**
+      - a set of Users with
+         - a username String
+         - a password String
+   - **actions**
+      - register (username: String, password: String): (user: User)
+         - **requires** username is unique (no existing user has the same username)
+         - **effects** registers the new user by adding to Users, returns this user
+      - authenticate (username: String, password: String): (user: User)
+         - **requires** user exists with given username and password
+         - **effects** authenticates and returns this user
 
 3. What essential invariant must hold on the state? How is it preserved?
-   - ans
+   - The essential invariant is that usernames are unique. This is preserved with the action *register*, as it requires that to register a new user, the given username must not already exist.
 
-4. One widely used extension of this concept requires that registration be confirmed by email. Extend the concept to include this functionality. (Hints: you should add (1) an extra result variable to the register action that returns a secret token that (via a sync) will be emailed to the user; (2) a new confirm action that takes a username and a secret token and completes the registration; (3) whatever additional state is needed to support this behavior.)
-   - ans
+4. Extend concept with email
+   - **concept** PasswordAuthentication
+   - **purpose** limit access to known users
+   - **principle** after a user registers with a username and a password, they can authenticate with that same username and password and be treated each time as the same user
+   - **state**
+      - a set of Users with
+         - a username String
+         - a password String
+         - an email String
+      - a set of pendingUsers with
+         - a username String
+         - a password String
+         - an email String
+         - a token String
+   - **actions**
+      - register (username: String, password: String, email: String): (token: String)
+         - **requires** username is unique (no user in Users or pendingUsers have the same username)
+         - **effects** adds user to pendingUsers, emails token associated with this user
+      - authenticate (username: String, password: String): (user: User)
+         - **requires** user exists with given username and password in Users
+         - **effects** authenticates this user, returns this user
+      - confirmEmail (username: String, token: String): (user: User)
+         - **requires** user exists with given username in pendingUsers
+         - **effects** adds user to Users, removes user from pendingUsers, returns this user
 
 
 ## Exercise 3: Comparing concepts
