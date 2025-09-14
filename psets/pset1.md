@@ -85,7 +85,7 @@
 ### Minimal Specification of PersonalAccessToken
 - **concept** PersonalAccessToken
 - **purpose** limit access to certain users without needing a password
-- **principle** after a user generates a personal access token, it can grant access for that users instead of the password
+- **principle** after a registered user generates a personal access token, it can grant access for that user without the password
 - **state**
     - a set of Tokens with
         - an owner User
@@ -98,8 +98,8 @@
     - createToken (owner: User): (token: String)
         - **requires** owner exists
         - **effects** generates a new token associated with given owner, adds to Tokens, returns the token
-    - authenticate (token: Token): (user: User)
-        - **requires** token exists
+    - authenticate (owner: User, token: Token): (user: User)
+        - **requires** owner and token exist, the token is owned by the given owner
         - **effects** authenticates the token, returns the token's owner
     - deleteToken (owner: User, token: String)
         - **requires** token exists and given owner is the token's owner
@@ -114,3 +114,4 @@ The main difference between PasswordAuthentication and PersonalAccessToken is th
 One major improvement I would make to the documentation is to clearly outline cases in which someone would use a personal access token. I struggled to understand when the tokens would be used and how that is different from a password authentication. Another suggestion I have is to separate the pages for fine-grained personal access token and personal access token (classic) completely. It was hard to navigate through the page when I was only looking for information on personal access token (classic).
 
 ## Exercise 4: Defining familiar Concepts
+
