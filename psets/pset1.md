@@ -11,10 +11,10 @@
    - A reason to allow this is to prepare for an accidental opening or closing of a registry. If the user prematurely opens or closes a registry, then there should be an option to open/close again to fix the mistake, then still able to open/close at a later time. 
 
 4. **Registry deletion**. There is no action to delete a registry. Would this matter in practice?
-   - This would matter based on the design of the website, and in some extreme cases. If the website does not separate open and closed registries, then some users that frequently use gift registries would want to keep everything organized by deleting old registries. In other extreme cases, the owner of the registry may have bad memories associated to one and wish to delete it completely.
+   - This would matter based on the design of the website, and in some extreme cases. If the website does not separate open and closed registries, then some users that frequently use gift registries would want to keep everything organized by deleting old registries. To add on, if someone creates a registry by accident, then there should be an option to delete it for organization purposes. In other extreme cases, the owner of the registry may have bad memories associated to one and wish to delete it completely.
 
 5. **Queries**. What are two common queries likely to be executed against the concept state? (Hint: one is executed by a registry owner, and one by a giver of a gift.)
-   - One common query likely to be executed against the concept state is to track what has been purchased. Another common query is for the givers of a gift to see what items have not been purchased yet.
+   - One common query likely to be executed against the concept state is to track what has been purchased. Another common query is for the givers of a gift to see what items have not been purchased yet to the full count.
 
 6. **Hiding purchases**. A common feature of gift registries is to allow the recipient to choose not to see purchases so that an element of surprise is retained. How would you augment the concept specification to support this?
    - First, I would edit the state of Registrys to become:
@@ -82,5 +82,35 @@
 
 ## Exercise 3: Comparing concepts
 
+### Minimal Specification of PersonalAccessToken
+- **concept** PersonalAccessToken
+- **purpose** limit access to certain users without needing a password
+- **principle** after a user generates a personal access token, it can grant access for that users instead of the password
+- **state**
+    - a set of Tokens with
+        - an owner User
+        - a token String
+        - a last-used Date
+    - a set of Users with
+        - a username String
+        - a password String
+- **actions**
+    - createToken (owner: User): (token: String)
+        - **requires** owner exists
+        - **effects** generates a new token associated with given owner, adds to Tokens, returns the token
+    - authenticate (token: Token): (user: User)
+        - **requires** token exists
+        - **effects** authenticates the token, returns the token's owner
+    - deleteToken (owner: User, token: String)
+        - **requires** token exists and given owner is the token's owner
+        - **effects** removes given token from Tokens
+    - expiredTokens ()
+        - **effects** if the last-used Date of a token is over a year ago, delete the token from Tokens
+
+### Comparison of PasswordAuthentication and PersonalAccessToken
+The main difference between PasswordAuthentication and PersonalAccessToken is that passwords allow a user to access to everything, whereas personal access tokens grant access to specific resources. Since there can be multiple tokens per user to be created according to specific use cases, tokens also expire if they are not used for more than a year. This differs from passwords, as there exists only one per user and last an infinite amount. 
+
+### Improvements to the GitHub Documentation
+One major improvement I would make to the documentation is to clearly outline cases in which someone would use a personal access token. I struggled to understand when the tokens would be used and how that is different from a password authentication. Another suggestion I have is to separate the pages for fine-grained personal access token and personal access token (classic) completely. It was hard to navigate through the page when I was only looking for information on personal access token (classic).
 
 ## Exercise 4: Defining familiar Concepts
