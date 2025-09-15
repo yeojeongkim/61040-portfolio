@@ -115,3 +115,62 @@ One major improvement I would make to the documentation is to clearly outline ca
 
 ## Exercise 4: Defining familiar Concepts
 
+### Specification of URL Shortener
+- **concept** URLShortener
+- **purpose** shorten a long URL to make it more accessible
+- **principle** given a URL, it will shorten that URL to be less characters while still maintaining the pointer to the intended destination
+- **state**
+    - a set of URLs with
+        - a long URL string
+        - a shortened URL string
+- **actions**
+    - userDefinedURL (givenURL: String, changed: String): (newURL: String)
+        - **requires** givenURL is a valid URL, changed is valid alphanumeric string
+        - **effects** generates a new URL that links the given URL to a new URL including the changed at the end (i.e. tinyurl.com/*changed*)
+    - autogenerateURL (givenURL: String): (newURL: String)
+        - **requires** givenURL is a valid URL, changed is valid alphanumeric string
+        - **effects** generates a new random URL that links the given URL to a new URL including the random string (i.e. tinyurl.com/*randomString*)
+
+### Specification of Conference Room Booking
+- **concept** ConferenceRoomBooking
+- **purpose** allow verified users to book a conference room
+- **principle** given a room name and the time slot, allows the verified user to book the conference room for the time frame if it is available
+- **state**
+    - a set of Rooms with
+        - a room name String
+        - a set of Times with
+           - a Datetime object
+    - a set of verifiedUsers with
+        - a username String
+        - a password String
+- **actions**
+    - reserve (user: verifiedUser, room: Room, hours: Times): (room: Room)
+        - **requires** user is in verifiedUsers, room is in Rooms, all hours are not in Times
+        - **effects** adds hours to Times of the Room 
+    - addUser (username: String, password: String): (user: verifiedUser)
+        - **requires** username is unique
+        - **effects** adds user to verifiedUsers, returns user
+
+### Specification of Address Verification
+- **concept** AddressVerification
+- **purpose** allow transactions
+- **principle** a user provides some kind of verification of their identity using their address, and the verifier checks the address using an external record
+- **state**
+    - a set of Users with
+        - a username String
+        - an address String
+    - a set of externalRecords with
+        - a resident User
+        - an address String
+- **actions**
+    - requestVerification (username: String, address: String): (isVerified: Boolean)
+        - **requires** username with matching address exists in Users
+        - **effects** initiates a verification using User and address to an external record and returns the result
+    - verify (user: User, address: String): (isVerified: Boolean)
+        - **effects** verifies user, returns True if user and address matches in externalRecords otherwise False
+    - addAddress (user: User, address: Address)
+        - **requires** user exists
+        - **effects** adds address to Users and externalRecords
+    - addUser (username: String, address: String)
+        - **requires** username is unique
+        - **effects** add username and address to Users, add User and address to externalRecords
