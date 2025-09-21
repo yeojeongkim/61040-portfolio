@@ -38,8 +38,8 @@
        - a set of shortUrls with
           - a count Number
    - **actions**
-       - recordAccess (shortUrl)
-          - **effect** increments count for shortUrl
+       - recordAccess (shortUrl) : (count: Number)
+          - **effect** increments count for shortUrl, returns new count
        - getCount (shortUrl) : (count: Number)
           - **requires** shortUrl exists
           - **effect** returns the count
@@ -48,7 +48,7 @@
    - **purpose** ensure that only the owner user can access analytics
    - **principle** each short URL is associated with exactly one owner
    - **state**
-       - a set of ShortUrls with
+       - a set of shortUrls with
           - an owner User
    - **actions**
        - assignOwner (shortUrl, owner: User)
