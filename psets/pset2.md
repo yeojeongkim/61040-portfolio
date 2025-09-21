@@ -31,3 +31,30 @@
 
 
 ## Extending the Design
+**concept** Analytics [shortUrl]
+   - **purpose** track how many times each short URL has been accessed
+   - **principle** each lookup increments the count for that short URL
+   - **state**
+       - a set of shortUrls with
+          - a count Number
+   - **actions**
+       - recordAccess (shortUrl)
+          - **effect** increments count for shortUrl
+       - getCount (shortUrl) : (count: Number)
+          - **requires** shortUrl exists
+          - **effect** returns the count
+
+**concept** Ownership [shortUrl, User]
+   - **purpose** ensure that only the owner user can access analytics
+   - **principle** each short URL is associated with exactly one owner
+   - **state**
+       - a set of ShortUrls with
+          - an owner User
+   - **actions**
+       - assignOwner (shortUrl, owner: User)
+          - **requires** shortUrl does not exist (not already owned)
+          - **effect** associates shortUrl with owner
+       - checkOwner (shortUrl, owner: User)
+          - **requires** shortUrl is owned by some user
+          - **effect** returns true if the given owner is the owner of the given shortUrl
+
